@@ -1,0 +1,15 @@
+1- instalação do npm (npm install)
+2- instalação do nest.js (npm i -g @nestjs/cli)
+3- criação do projeto NEST.JS (nest new project-name)
+4- subir servidor local (npm run start:dev) (':dev' para ver as alterações dos arquivos)
+5- cria rapidamente um CRUD com validação integrada (nest g resource [name])
+6- cria um controllador usando CLI (nest g controller [name])
+7- aproveita as vantagens das EXPRESS tipagens (npm i @types/express)
+8- @Get(['NAME_GET_ROUTE']) produz um mapeamento de rota para solicitações como [GET /'CONTROLADOR'/'NAME_GET_ROUTE']
+9- nest possui uma forma padrão de manipular respostas, onde arrays e objetos são alterados para JSON, e quando retorna tipos primitivos (string, number, boolean) o Nest envia o valor sem altera-lo. o código de retorno é sempre 200, e 201 para solicitações POST, mas é possivel alterar com @HttpCode(). ex: @HttpCode(190)
+10- nest fornece acesso ao objeto de solicitação da plataforma subjacente (Express) podemos acessa-lo adicionando @Req()
+11- nest fornece o decorador @Response() com alias @Res(), ao utiliza-lo vc coloca o Nest no modo específico da biblioteca para esse manipulador,ao fazer isso você deve emitir uma resposta como res.json(...) ou res.send(...), ou o servidor HTTP travará
+12- nest fornece decoradores para todos os métodos HTTP padrão: @Get(), @Post(), @Put(), @Delete(), @Patch(), @Options()e @Head(). Além disso, @All()define um endpoint que lida com todos eles
+13- especifica um cabeçalho de resposta personalizado @Header('Cache-Control', 'none')
+14- redireciona uma resposta para uma URL especifica @Redirect('https://nestjs.com', 301), primeiro valor é a URL e o segundo valor o código de retorno.
+15- para passar um parametro pela rota da URL, é necessário declarar no @Get() como por exemplo @Get(':id') e dentro da função receber com o decorador @Param().
